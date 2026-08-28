@@ -23,8 +23,25 @@ test_ballots = [[1, 2, 3],
                 [3, 2, 1],
                 [1, 2, 3]]
 
+def condorce_method(b):
+    results = np.zeros_like(b[0])
+    max_votes = []
+    elim_list = []
+    elim_round = 1
+    while max_votes(1) < 50:
+        min = [[0, 0]]
+        for ballot in b:
+            for canadate in range(len(ballot)) and not elim_list:
+                if ballot(canadate) == elim_round:
+                    results(canadate) += 1
+        for canadate in range(len(results)):
+            if results(canadate) < min(0)(1):
+                min(0)
+
+
 first_past_post(test_ballots)
 winners_list = first_past_post(test_ballots)
 bourda_winner = bourda_count(test_ballots)
 
 print(winners_list, bourda_winner)
+ 
